@@ -8,3 +8,21 @@ U:
     > 
 
 """
+
+nums = [5,1,6,3,12,2]
+
+isSorted = False
+count = 0
+
+while not isSorted:
+    isSorted = True
+    for i in range(len(nums)-1):
+        print('iteration: ',nums[i])
+        if nums[i] > nums[i+1]:
+            count += 1
+            print('swap1: ', nums[i])
+            print('swap2: ', nums[i+1])
+            nums[i], nums[i+1] = nums[i+1], nums[i]
+            print(nums)
+            isSorted = False
+print(f"Array is sorted in {count} swaps.")
